@@ -3,29 +3,48 @@
 
 <head>
     <meta charset="utf-8">
-    <title>unbenanntes Dokument</title>
+    <title>Das Problem</title>
     <style>
-        div{
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            
+        }
+
+        div {
             display: inline-block;
+            flex:1; /*alle divs*/
         }
 
-        #content1{
+        #alles {
+            width: 100%;
+            display:flex;
+        }
+
+        #content1,#content2, #content3 {
+            border: 10px solid;
+            /*border-color: inherit;/*wenn inherit, dann danach Angabe*/
+            border-radius: 50%;
+            /*mit % bleibt es immer gleich, bei Größenänderung*/
             
+        }
+
+        #content1 {
             background-color: purple;
+            border-color: purple;
+            /*flex:1;*/ /*wenn hier 2, dann insgesamt 5 Teile der Breite*/
         }
 
-        #content2{
-            
+        #content2 {
             background-color: aqua;
+            border-color: aqua;
+            /*flex:1;*/
         }
 
-        #content3{
-            
+        #content3 {
             background-color: plum;
-        }
-        div
-        {
-            border: 1px medium black;
+            border-color: plum;
+            /*flex:1;*/
         }
 
     </style>
@@ -33,9 +52,12 @@
 </head>
 
 <body>
-<div id="content1">Inhalt1</div>
-<div id="content2">Inhalt2</div>
-<div id="content3">Inhalt3</div>
+    <div id="alles">
+        <div id="content1">Inhalt1</div>
+        <div id="content2">Inhalt2</div>
+        <div id="content3">Inhalt3</div>
+        <div id="content4">Inhalt4</div>
+    </div>
 
 </body>
 
