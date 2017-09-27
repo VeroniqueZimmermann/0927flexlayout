@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flexitems</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+
+    #container {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-flow: row;
+    }
+
+    #container>div {
+        min-width: 80px;
+        min-height: 80px;
+        border: 1px solid black;
+        margin-top: 3%;
+        margin-left: 2px;
+    }
+
+    #container>div:nth-child(1) {
+        background-color: orchid;
+        flex: 1;
+    }
+
+    #container>div>img{
+      height: 50px;
+      width: 50px;
+    }
+
+    #container>div:nth-child(2) {
+        background-color: cyan;
+        flex: 2;
+    }
+
+    #container>div:nth-child(3) {
+        background-color: plum;
+        flex: 1;
+    }
+
+    @media all and (max-width: 600px) {
+	body{background-color:mediumseagreen;}
+  
+</style>
+
+
+
+<body>
+    <div id="container">
+        <div><img src="01.jpg"><img src="01.jpg"><img src="01.jpg"><img src="01.jpg"><img src="01.jpg"><img src="01.jpg"><img src="01.jpg"><img src="01.jpg"></div>
+        <div>Felxitem2</div>
+        <div>Flexitem3</div>
+        
+    </div>
+
+
+</body>
+
+</html>

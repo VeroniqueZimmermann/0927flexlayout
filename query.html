@@ -1,0 +1,205 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>media-query</title>
+<style>
+	.layout {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+ 
+.layout > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+ 
+.topnavigation {
+  background: yellow;
+}
+ 
+.navigation {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+ 
+.topnavigation a {
+  text-decoration: none;
+  display: block;
+  padding: 0.2em;
+  color: black;
+}
+ 
+.topnavigation a:hover {
+  text-decoration: none;
+  display: block;
+  color: violet;
+}
+ 
+aside ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+}
+ 
+aside a {
+  text-decoration: none;
+  display: block;
+  padding: 0.2em;
+  color: black;
+}
+ 
+aside a:hover {
+  text-decoration: none;
+  display: block;
+  color: violet;
+}
+ 
+.left li {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  width: 70px;
+  height: 100px;
+}
+ 
+.left li:first-of-type {
+  margin-top: 10px;
+}
+ 
+.header {
+  background: lightblue;
+}
+ 
+.footer {
+  background: mediumspringgreen ;
+}
+ 
+.content {
+  text-align: left;
+  background: gray;
+}
+ 
+.left {
+  background: lightsalmon;
+}
+ 
+.right {
+  background: lightblue;
+}
+ 
+@media all and (min-width: 600px) {
+  .left, .right {
+     flex: 1 auto;
+  }
+}
+ 
+@media all and (max-width: 600px) {
+	body{background-color:mediumseagreen;}
+  .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+  }
+ 
+  .topnavigation {
+      padding: 0px;
+  }
+ 
+  .topnavigation a {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+  }
+}
+ 
+@media all and (max-width: 800px) {
+	body{background-color:purple;}
+  .navigation {
+    justify-content: space-around;
+  }
+ 
+  .right {
+    border-top: 1px solid black;
+  }
+ 
+  .left li {
+    border: 0;
+    margin-bottom: 2px;
+    width: 100%;
+    height: 20px;
+  }
+ 
+  .left li:first-of-type {
+    margin-top: 5px;
+  }
+}
+ 
+@media all and (min-width: 800px) {
+	
+	body{background-color:black;}
+  .content {
+    flex: 3 0px;
+    order: 2;
+  }
+ 
+  .left {
+    order: 1;
+    border: 1px solid black;
+  }
+ 
+  .right {
+    order: 3;
+  }
+ 
+  .footer {
+    order: 4;
+  }
+}
+ 
+body {
+  padding: 2em;
+}</style>
+</head>
+
+<body>
+ <div class="layout">
+    <header class="header">Flexbox - Layout</header>
+      <nav class="topnavigation">
+        <ul class="navigation">
+          <li><a href="#">Start</a></li>
+          <li><a href="#">Informationen</a></li>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Impressum</a></li>
+        </ul>
+      </nav>
+        <main class="content">
+          <p>Lorem ipsum dolor sit amet…</p>
+          <p>Lorem ipsum dolor sit amet…</p>
+        </main>
+        <aside class="left">
+          <ul class="news">
+            <li><a href="#">News1</a></li>
+            <li><a href="#">News2</a></li>
+            <li><a href="#">News3</a></li>
+          </ul>
+        </aside>
+        <aside class="right">
+          <ul class="quicklinks">
+            <li><a href="#">Quicklink1</a></li>
+            <li><a href="#">Quicklink2</a></li>
+            <li><a href="#">Quicklink3</a></li>
+            <li><a href="#">Quicklink4</a></li>
+          </ul>
+        </aside>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>
